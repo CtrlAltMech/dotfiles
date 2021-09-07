@@ -7,8 +7,11 @@
 #   \/____/   \/_____/     \/_/            \/_____/   \/_____/   \/_/\/_/   \/_/ /_/   \/_____/
 #
 
-# Path to oh-my-zsh installation
-export ZSH="/Users/mech/.oh-my-zsh"
+# Path to oh-my-zsh installation on Linux system
+export ZSH="/home/mech/.oh-my-zsh"
+
+# Path to oh-my-zsh installation macOS
+#export ZSH="/Users/mech/.oh-my-zsh"
 
 # ZSH theme
 ZSH_THEME="sorin"
@@ -42,9 +45,11 @@ fi
 # Source ZSH file
 source $ZSH/oh-my-zsh.sh
 
-# Source zsh-syntax-highlighting plugin
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Source zsh-syntax-highlighting plugin on macOS
+#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Source zsh-syntax-highlighting plugin on Linux
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Needed for pyenv to add it to my path
 export PATH="$HOME/.pyenv/bin:$PATH"
