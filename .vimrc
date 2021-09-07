@@ -18,7 +18,6 @@ Plug 'itchyny/lightline.vim' "A light and configurable statusline/tabline plugin
 Plug 'https://github.com/nathanaelkane/vim-indent-guides.git' "Indent Guides is a plugin for visually displaying indent levels in Vim.
 Plug 'preservim/nerdtree' "The NERDTree is a file system explorer for the Vim editor.
 Plug 'https://github.com/itchyny/vim-gitbranch' " Provides a plugin that I can add into lightline showing my current git branch.
-Plug 'fatih/vim-go'
 
 call plug#end()
 
