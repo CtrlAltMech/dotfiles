@@ -33,6 +33,7 @@ zsh-autosuggestions # Suggests completions as you type
 extract # Type extract <file> pretty basic 
 web-search # Enter a web search from the CLI
 copydir # Copies the current directory path into the buffer for use later
+nmap # Nmap port scanner
 )
 
 # Preferred editor for local and remote sessions
