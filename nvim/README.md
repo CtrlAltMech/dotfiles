@@ -1,6 +1,6 @@
 # Neovim Config Overview
 
-![example](Screenshot 2023-07-05 at 13.44.07.png)
+![example](https://github-production-user-asset-6210df.s3.amazonaws.com/7492741/251305878-60c429c9-00a3-4235-8b65-55ec91d41ae1.png)
 
 # Plugins
 
