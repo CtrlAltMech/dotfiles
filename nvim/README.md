@@ -1,6 +1,6 @@
 # Neovim Config Overview
 
-![Screenshot 2023-07-05 at 13.44.07.png](Neovim%20Config%20Overview%20b2e0749aa9d24adf951a7aede954b1f6/Screenshot_2023-07-05_at_13.44.07.png)
+![example](Screenshot 2023-07-05 at 13.44.07.png)
 
 # Plugins
 
