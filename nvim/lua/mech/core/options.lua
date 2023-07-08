@@ -38,3 +38,4 @@ opt.splitbelow = true
 
 -- Makes a dash apart of the word when hitting dw
 opt.iskeyword:append("-")
+opt.iskeyword:append("/")
