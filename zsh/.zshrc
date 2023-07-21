@@ -11,10 +11,10 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Checks which OS is running to specify the correct path
+# Checks which OS is running to specify the correct settings
 if [[ "$(uname -s)" == "Linux" ]]; then
   # Path to oh-my-zsh installation on Linux system
   export ZSH="/home/$USER/.oh-my-zsh"
@@ -22,16 +22,23 @@ if [[ "$(uname -s)" == "Linux" ]]; then
   # Source zsh-syntax-highlighting plugin on Linux
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+  # Half-Life prompt theme
+  ZSH_THEME="half-life"
+
 elif [[ "$(uname -s)" == "Darwin" ]]; then
   # Path to oh-my-zsh installation macOS
   export ZSH="/Users/$USER/.oh-my-zsh"
 
+  # ZSH theme https://github.com/romkatv/powerlevel10k
+  ZSH_THEME="powerlevel10k/powerlevel10k"
+
+  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
   # Source zsh-syntax-highlighting plugin on macOS
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
 
-# ZSH theme https://github.com/romkatv/powerlevel10k
-ZSH_THEME="powerlevel10k/powerlevel10k"
+fi
 
 # Use case sensitive completion
 CASE_SENSITIVE="true"
@@ -68,11 +75,4 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-# Adding scripts directory
-export PATH="$HOME/scripts:$PATH"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Specifying theme for bat (https://github.com/sharkdp/bat)
-export BAT_THEME="Dracula"
