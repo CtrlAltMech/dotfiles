@@ -41,7 +41,10 @@ scrubme () {
 }
 
 # Download all wallpapers from post
-wpdl () {
-    curl $1 | grep --extended-regexp --only-matching "i.4cdn.org/wg/.{21}" | sed "s/s//g" | xargs wget
-}
+# wpdl () {
+#     curl $1 | grep --extended-regexp --only-matching "i.4cdn.org/wg/.{21}" | sed "s/s//g" | xargs wget
+# }
 
+wpdl () {
+    curl "$1" 2>/dev/null | grep --extended-regexp --only-matching "i.4cdn.org/wg/.{21}" | sed "s/s//g" 
+}
