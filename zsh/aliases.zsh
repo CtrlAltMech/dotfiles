@@ -32,7 +32,7 @@ alias fdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
 
 # Function to use cheat.sh was cheat <some command>
 cheat () {
-    curl cheat.sh/"$1" >&2
+    curl -A "curl" cheat.sh/"$1" >&2
 }
 
 # Function to cleanup script file for class
@@ -40,11 +40,30 @@ scrubme () {
     cat "$1" | perl -pe 's/\e([^\[\]]|\[.*?[a-zA-Z]|\].*?\a)//g' | col -b > "$2"    
 }
 
-# Download all wallpapers from post
-# wpdl () {
-#     curl $1 | grep --extended-regexp --only-matching "i.4cdn.org/wg/.{21}" | sed "s/s//g" | xargs wget
-# }
 
+# Downloads all images from 4chan wallpaper board
 wpdl () {
-    curl "$1" 2>/dev/null | grep --extended-regexp --only-matching "i.4cdn.org/wg/.{21}" | sed "s/s//g" 
+    local dir="$2"
+    local link="$1"
+    local answer
+    local pattern='i.4cdn.org/wg/.{21}'
+    local link_array=($(curl "$link" 2>/dev/null | grep --extended-regexp --only-matching $pattern | sed "s/s//g")) 
+    local link_amount="${#link_array[@]}"
+    
+    read -p "There are $link_amount images in this link. Do you want to download them? (y/n): " answer
+    
+    if [[ $answer =~ (y|Y) ]]; then 
+        for i in "${link_array[@]}"; do
+            echo "$i"
+            wget -P "$dir" "$i"
+        done
+        echo "COMPLETE!"
+        exit 0
+    elif [[ $answer =~ (n|N) ]]; then
+        echo "Exiting..."
+        exit 0
+    else
+        echo "Not a valid option"
+        exit 1
+    fi
 }
