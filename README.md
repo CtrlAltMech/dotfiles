@@ -13,7 +13,7 @@ The dotfiles I use on my macOS/Linux systems.
 - ZSH config
 - Powerline 10k shell prompt config
 - neofetch config
-
+- curl config (.curlrc)
 ## Neovim Summary
 Requires [Latest](https://github.com/neovim/neovim/releases/tag/stable) Neovim release for all plugins to work. (Untested with older versions)
 
@@ -45,7 +45,7 @@ Requires [Latest](https://github.com/neovim/neovim/releases/tag/stable) Neovim r
 - [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Autoclose parentheses, brackets, quotes, etc.
 - [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) - Autoclose tags
 - [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Show line modifications on left-hand side
-
+- [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) - Preview Markdown on your modern browser
 Keybindings list can be found in the wiki [here](https://github.com/CtrlAltMech/dotfiles/wiki/Neovim-Keybindings).
 
 ## Shell Items
