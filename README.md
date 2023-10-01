@@ -1,6 +1,6 @@
 ![neovim](https://github-production-user-asset-6210df.s3.amazonaws.com/7492741/251305878-60c429c9-00a3-4235-8b65-55ec91d41ae1.png)
 
-![terminal](https://github.com/CtrlAltMech/dotfiles/assets/7492741/4d48a585-2947-4e29-bad1-1b1efb000765)
+![terminal](https://github.com/CtrlAltMech/sspush/assets/7492741/169aac12-d022-4c71-aaf2-7b6462ac68cd)
 
 # Mech's Dotfiles
 
@@ -13,7 +13,10 @@ The dotfiles I use on my macOS/Linux systems.
 - ZSH config
 - Powerline 10k shell prompt config
 - neofetch config
+- Wezterm config
+- Tmux config
 - curl config (.curlrc)
+
 ## Neovim Summary
 Requires [Latest](https://github.com/neovim/neovim/releases/tag/stable) Neovim release for all plugins to work. (Untested with older versions)
 
@@ -40,7 +43,6 @@ Requires [Latest](https://github.com/neovim/neovim/releases/tag/stable) Neovim r
 - [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim) - Bridges gap between mason & lspconfig
 - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Easily configure language servers
 - [hrsh7th/cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) - For autocompletion
-- [jose-elias-alvarez/typescript.nvim](https://github.com/jose-elias-alvarez/typescript.nvim) - Additional functionality for Typescript server (e.g. rename file & imports) NEEDS TO BE REMOVED
 - [onsails/lspkind.nvim](https://github.com/onsails/lspkind.nvim) - VSCode-like icons for autocompletion
 - [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Autoclose parentheses, brackets, quotes, etc.
 - [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) - Autoclose tags
@@ -52,8 +54,9 @@ Keybindings list can be found in the wiki [here](https://github.com/CtrlAltMech/
 - [ZSH](https://zsh.sourceforge.io/) - Shell
 - [Oh My ZSH](https://ohmyz.sh/) - ZSH configuration manager
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k) - Shell prompt for ZSH
-- [iTerm2](https://iterm2.com/) - Terminal for macOS
+- [Wezterm](https://wezfurlong.org/wezterm/) - Cross platform terminal emulator
 - [Meslo LGS NF Font](https://github.com/romkatv/powerlevel10k#manual-font-installation) - Font (Should be downloaded with Powerlevel10k)
+- [Tmux](https://github.com/tmux/tmux/wiki) - Tmux is a terminal multiplexer.
 
 ## Misc...
 - [bpytop](https://github.com/aristocratos/bpytop) - Resource monitor
