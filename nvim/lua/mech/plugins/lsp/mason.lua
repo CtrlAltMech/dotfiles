@@ -20,7 +20,8 @@ mason_lspconfig.setup({
     "gopls",
     "html",
     "cssls",
-    "pyre"
+    "pyre",
+    "powershell_es"
   },
   -- auto-install configured servers (with lspconfig)
   automatic_installation = true, -- not the same as ensure_installed

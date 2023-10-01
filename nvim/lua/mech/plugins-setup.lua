@@ -11,8 +11,7 @@ local ensure_packer = function()
 end
 local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
--- autocommand that reloads neovim and installs/updates/removes plugins
--- when file is saved
+-- autocommand that reloads neovim and installs/updates/removes plugins when file is saved
 vim.cmd([[ 
   augroup packer_user_config
     autocmd!
@@ -26,8 +25,9 @@ if not status then
   return
 end
 
--- add list of plugins to install
-return packer.startup(function(use)
+-- Add list of plugins to install
+return packer.startup(function(use) 
+
   -- packer can manage itself
   use("wbthomason/packer.nvim")
 
@@ -85,8 +85,8 @@ return packer.startup(function(use)
       { "nvim-tree/nvim-web-devicons" },
       { "nvim-treesitter/nvim-treesitter" },
     },
-  }) -- enhanced lsp uis
-  use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+  }) 
+  -- enhanced lsp uis
   use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
   -- treesitter configuration

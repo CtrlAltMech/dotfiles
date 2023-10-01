@@ -14,6 +14,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
 # Checks which OS is running to specify the correct path
 if [[ "$(uname -s)" == "Linux" ]]; then
   # Path to oh-my-zsh installation on Linux system

@@ -10,11 +10,6 @@ if not cmp_nvim_lsp_status then
   return
 end
 
--- import typescript plugin safely
-local typescript_setup, typescript = pcall(require, "typescript")
-if not typescript_setup then
-  return
-end
 
 
 local keymap = vim.keymap -- for conciseness
@@ -94,3 +89,19 @@ lspconfig["pyre"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
+
+-- configure powershell_es server (Powershell)
+lspconfig["powershell_es"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+
+
+
+
+
+
+
+
+
