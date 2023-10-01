@@ -45,6 +45,14 @@ return packer.startup(function(use)
   use("tpope/vim-surround") -- add, delete, change surroundings (Like " or ' or whatever)
   use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
+  -- Mardown preview
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
   -- commenting with gc
   use("numToStr/Comment.nvim")
 
