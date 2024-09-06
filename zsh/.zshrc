@@ -12,6 +12,8 @@
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+else;
+    :
 fi
 
 # Checks which OS is running to specify the correct settings
@@ -68,11 +70,5 @@ fi
 
 # Source ZSH file
 source $ZSH/oh-my-zsh.sh
-
-# Needed for pyenv to add it to my path
-export PATH="$HOME/.pyenv/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
 
 
