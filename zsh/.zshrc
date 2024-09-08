@@ -7,27 +7,34 @@
 #   \/____/   \/_____/     \/_/            \/_____/   \/_____/   \/_/\/_/   \/_/ /_/   \/_____/
 #
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-else;
-    :
-fi
 
 # Checks which OS is running to specify the correct settings
 if [[ "$(uname -s)" == "Linux" ]]; then
+
   # Path to oh-my-zsh installation on Linux system
   export ZSH="/home/$USER/.oh-my-zsh"
   
+  # Set the GPG_TTY to this terminal device
+  GPG_TTY=$(tty)
+  export GPG_TTY
+
   # Source zsh-syntax-highlighting plugin on Linux
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
   # Half-Life prompt theme
   ZSH_THEME="half-life"
 
 elif [[ "$(uname -s)" == "Darwin" ]]; then
+  
+  # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+  # Initialization code that may require console input (password prompts, [y/n]
+  # confirmations, etc.) must go above this block; everything else may go below.
+  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  else;
+     :
+  fi
+
   # Path to oh-my-zsh installation macOS
   export ZSH="/Users/$USER/.oh-my-zsh"
 
@@ -38,7 +45,7 @@ elif [[ "$(uname -s)" == "Darwin" ]]; then
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
   # Source zsh-syntax-highlighting plugin on macOS
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  #source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 fi
 
@@ -59,6 +66,7 @@ zsh-autosuggestions # Suggests completions as you type
 extract # Type extract <file> pretty basic 
 copypath # Copies the current directory path into the buffer for use later
 nmap # Nmap port scanner
+zsh-syntax-highlighting # Syntax highlighting in the terminal
 )
 
 # Preferred editor for local and remote sessions

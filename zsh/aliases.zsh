@@ -15,18 +15,21 @@
 ### Networking ###
 
 # Gives me my public IP
-alias pubip="curl icanhazip.com"
-
+alias pubip='curl icanhazip.com'
 
 ### File editing shortcuts ###
+alias zc='nvim ~/git_repos/dotfiles/zsh/.zshrc'
+alias vc='nvim ~/git_repos/dotfiles/vim/.vimrc'
+alias sz='source ~/git_repos/dotfiles/zsh/.zshrc'
 
-alias zc="nvim ~/git_repos/dotfiles/zsh/.zshrc"
-alias vc="nvim ~/git_repos/dotfiles/vim/.vimrc"
-alias sz="source ~/git_repos/dotfiles/zsh/.zshrc"
+### CLI movement/maniulation aliases ###
+alias ll='ls -la'
+alias bat='batcat'
+
 
 ### macOS specific ###
 
-alias fdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
+alias fdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
 
 ### Misc Functions ###
 
