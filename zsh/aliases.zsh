@@ -19,7 +19,6 @@ alias pubip='curl icanhazip.com'
 
 ### File editing shortcuts ###
 alias zc='nvim ~/git_repos/dotfiles/zsh/.zshrc'
-alias vc='nvim ~/git_repos/dotfiles/vim/.vimrc'
 alias sz='source ~/git_repos/dotfiles/zsh/.zshrc'
 
 ### CLI movement/maniulation aliases ###
@@ -36,11 +35,6 @@ alias fdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
 # Function to use cheat.sh was cheat <some command>
 cheat () {
     curl -A "curl" cheat.sh/"$1" >&2
-}
-
-# Function to cleanup script file for class
-scrubme () {
-    cat "$1" | perl -pe 's/\e([^\[\]]|\[.*?[a-zA-Z]|\].*?\a)//g' | col -b > "$2"    
 }
 
 

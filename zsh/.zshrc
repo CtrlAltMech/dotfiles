@@ -22,7 +22,8 @@ if [[ "$(uname -s)" == "Linux" ]]; then
   #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
   # Half-Life prompt theme
-  ZSH_THEME="half-life"
+  # ZSH_THEME="half-life"
+  ZSH_THEME="half-life-custom"
 
 elif [[ "$(uname -s)" == "Darwin" ]]; then
   
