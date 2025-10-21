@@ -14,6 +14,9 @@ if [[ "$(uname -s)" == "Linux" ]]; then
   # Path to oh-my-zsh installation on Linux system
   export ZSH="/home/$USER/.oh-my-zsh"
   
+  # Update PATH to include ~/.local/bin for user scripts
+  export PATH="$PATH:$HOME/.local/bin"
+
   # Set the GPG_TTY to this terminal device
   GPG_TTY=$(tty)
   export GPG_TTY

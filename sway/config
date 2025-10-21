@@ -38,16 +38,17 @@ include /etc/sway/config-vars.d/*
 # Things to execute on startup
 exec waybar
 exec lxpolkit
-exec_always swaybg --image ~/Pictures/wallpapers/tokyonight/tokyo-night40.png --mode stretch
+exec_always swaybg --image ~/Pictures/wallpapers/gnustallman.png --mode stretch
 exec lxqt-policykit
 
 # Window settings
-#client.focused          #33CCA6 #33CCA6 #33CCA6 #33CCA6
 client.focused #5ECC63 #5ECC63 #5ECC63 #5ECC63
 default_border pixel 3
 gaps inner 4
 gaps outer 1
 
+# Keyboard settings
+input * xkb_options ctrl:nocaps
 
 ### Output configuration
 #
@@ -114,6 +115,9 @@ gaps outer 1
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    # Run sspush
+    bindsym $mod+Shift+s exec $HOME/git_repos/sspush/sspush -i
 #
 # Moving around:
 #

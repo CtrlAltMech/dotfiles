@@ -1,9 +1,11 @@
 * {
     border: none;
     border-radius: 0;
-    font-size: 18px;
     min-height: 0;
+    font-family: "Symbols Nerd Font", "GohuFont 14 Nerd Font Mono", "Noto Sans Mono", monospace;
+    font-size: 20px;
 }
+
 
 window#waybar {
     background: transparent;
@@ -82,6 +84,7 @@ window#waybar {
     border-radius: 5px 5px 5px 5px;
     margin-left: -3px;
 }
+
 
 #battery.charging {
     color: #9ece6a;
