@@ -24,7 +24,7 @@ alias sz='source ~/git_repos/dotfiles/zsh/.zshrc'
 ### CLI movement/maniulation aliases ###
 alias ll='ls -la'
 alias bat='batcat'
-
+alias gh='history | grep '
 
 ### macOS specific ###
 
