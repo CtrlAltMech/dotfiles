@@ -4,17 +4,17 @@
 
 # Mech's Dotfiles
 
-The dotfiles I use on my macOS/Linux systems.
+The dotfiles I use on all my systems.
 
 ## Contents
-- Neovim config
+- neovim/nvchad config
 - vim config (Old configuration not used anymore)
 - bpytop config
 - ZSH config
 - Powerline 10k shell prompt config
 - neofetch config
 - Wezterm config
-- Tmux config
+- tmux config
 - curl config (.curlrc)
 
 ## Neovim Summary

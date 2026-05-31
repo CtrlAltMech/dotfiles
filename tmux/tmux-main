@@ -1,0 +1,18 @@
+#!/bin/sh
+# Mech's tmux launch script
+
+
+# Set this session as my main one
+SESSION="main"
+
+# Check if tmux session is already running. Attach if it does.
+tmux has-session -t "$SESSION" 2>/dev/null && exec tmux attach -t "$SESSION"
+
+# Create session and all windows
+tmux new-session -d -s "$SESSION" -n " Local"
+tmux new-window -t "$SESSION:" -n " IRC"
+tmux new-window -t "$SESSION:" -n " Dev"
+
+# Launch session into window 1
+tmux select-window -t "$SESSION:1"
+tmux attach -t "$SESSION"
