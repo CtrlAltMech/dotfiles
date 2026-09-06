@@ -117,10 +117,20 @@ input * xkb_options ctrl:nocaps
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit shortcut pressed. Do you really want to exit sway?' -B 'Yes, exit sway' 'swaymsg exit'
 
-    # Run sspush
+    # Run sspush interactive with public link
     bindsym $mod+Shift+s exec $HOME/git_repos/sspush/sspush -i
+
+    #Run sspush interactive saved locally only
+    bindsym $mod+Shift+u exec $HOME/git_repos/sspush/sspush -I
+
+    #Run sspush screenshot entire desktop locally only
+    bindsym $mod+Shift+a exec $HOME/git_repos/sspush/sspush -A
+
+    #Run sspush video capture interactive. Use 'k' keybind to stop recording.
+    bindsym $mod+Shift+v exec $HOME/git_repos/sspush/sspush -V
+    bindsym $mod+Shift+p exec pkill wf-recorder
 #
 # Moving around:
 #

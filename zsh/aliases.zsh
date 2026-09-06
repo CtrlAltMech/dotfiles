@@ -21,7 +21,7 @@ alias pubip='curl icanhazip.com'
 alias zc='nvim ~/git_repos/dotfiles/zsh/.zshrc'
 alias sz='source ~/git_repos/dotfiles/zsh/.zshrc'
 
-### CLI movement/maniulation aliases ###
+### CLI movement/manipulation aliases ###
 alias ll='ls -la'
 alias bat='batcat'
 alias gh='history | grep '
